@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 const Footer = () => {
 	return (
-		<footer className="py-5">
+		<footer className="py-5 text-slide-up">
 			<div className="text-gray-400 text-xs font-light flex justify-between items-end">
 				<div>
 					<div className="flex text-2xl gap-x-4 mb-6">

@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { FaUser, FaGithub, FaGoogle } from "react-icons/fa"
+import { AiOutlineArrowLeft } from "react-icons/ai"
+import { RxCross2 } from "react-icons/rx"
 type ModalProps = {
 	setModal: any
 }
@@ -17,12 +19,19 @@ const Modal = ({ setModal }: ModalProps) => {
 					onClick={closeModal}
 					className="absolute cursor-pointer text-gray-400 top-5 right-5  px-2 duration-200 ease-in-out"
 				>
-					X
+					<RxCross2 />
 				</button>
-				<div
-					className="p-3 rounded-md bg-input-form"
-					onClick={() => setStep(false)}
-				>
+				{step ? (
+					<button
+						onClick={() => setStep(false)}
+						className="absolute cursor-pointer text-gray-400 top-5 left-5  px-2 duration-200 ease-in-out"
+					>
+						<AiOutlineArrowLeft />
+					</button>
+				) : (
+					""
+				)}
+				<div className="p-3 rounded-md bg-input-form">
 					<FaUser />
 				</div>
 				<h2 className="text-gray-100 font-bold mt-5 text-xl">Login</h2>

@@ -10,7 +10,7 @@ export default function Home() {
 			{modal ? <Modal setModal={setModal} /> : ""}
 			<Navbar setModal={setModal} />
 			<main className="flex">
-				<div>
+				<div className="text-slide-up">
 					<span className="text-xs bg-orange text-orange-400 py-1 px-2 rounded-full">
 						Currently in private beta
 					</span>
@@ -24,7 +24,7 @@ export default function Home() {
 						API for developers
 						<span className="bg-dev text-emerald-300">developers</span>
 					</h3> */}
-					<div className="text-slide-up">
+					<div>
 						<p className="w-3/6 mt-5 text-gray-500">
 							Build, test, and send transactional emails at scale. Resend
 							provides the best developer experience helping you reach users
