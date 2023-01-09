@@ -5,10 +5,8 @@ import { useState } from "react"
 
 export default function Home() {
 	document.onkeydown = function (e) {
-		console.log("key down", e)
-		if (e.key === "a") {
-			setModal(true)
-		}
+		if (e.key === "a") setModal(true)
+		else if (e.key === "Escape") setModal(false)
 	}
 	const [modal, setModal] = useState<Boolean>(false)
 	return (
