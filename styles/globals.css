@@ -5,8 +5,35 @@
 body{
   background: #05050B;
 }
-input::placeholder{
-  opacity: 0.5;
+
+/* ======== Modal animation =========*/
+.modal{
+  animation: open-scale-in-fade .2s ease-in-out;
+}
+/* .shadow-modal{
+  background-color: rgba(0,0,0,.565);
+  animation: fade-in .2s ease;
+} */
+@keyframes open-scale-in-fade{
+  0%{opacity:0;transform:scale(.98)}
+  to{opacity:1;transform:scale(1)}
+}
+
+/* ============= Apparition animation ============ */
+.header-slide-down {
+  animation: header-slide-down-fade 1s ease-in-out;
+}
+@keyframes header-slide-down-fade{
+  0%{opacity:0;transform:translateY(-16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.text-slide-up {
+  animation: hero-text-slide-up-fade 1.2s ease-in-out;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+}
+@keyframes hero-text-slide-up-fade {
+  0%{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
 }
 .bg-form-modal {
   background: #05050a;

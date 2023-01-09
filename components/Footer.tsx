@@ -5,20 +5,37 @@ const Footer = () => {
 			<div className="text-gray-400 text-xs font-light flex justify-between items-end">
 				<div>
 					<div className="flex text-2xl gap-x-4 mb-6">
-						<FaGithub />
-						<FaTwitter />
-						<FaLinkedin />
+						<a
+							href="#"
+							className="hover:text-gray-200 duration-100 ease-out cursor-pointer"
+						>
+							<FaGithub />
+						</a>
+						<a
+							href="#"
+							className="hover:text-gray-200 duration-100 ease-out cursor-pointer"
+						>
+							<FaTwitter />
+						</a>
+						<a
+							href="#"
+							className="hover:text-gray-200 duration-100 ease-out cursor-pointer"
+						>
+							<FaLinkedin />
+						</a>
 					</div>
-					<span className="pt-10">
+					<span className="">
 						© {new Date().getFullYear()} Avrel Sosa <br /> Yaounde, Cameroon
 						#237
 					</span>
 				</div>
 				<div>
-					<a href="#" className="mr-4">
+					<a href="#" className="mr-4 hover:text-gray-200 duration-300 ease-in">
 						Privacy policy
 					</a>
-					<a href="#">Terms of use</a>
+					<a href="#" className="hover:text-gray-200 duration-300 ease-in">
+						Terms of use
+					</a>
 				</div>
 			</div>
 		</footer>
