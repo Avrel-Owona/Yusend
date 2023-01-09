@@ -4,6 +4,12 @@ import Modal from "../components/Modal"
 import { useState } from "react"
 
 export default function Home() {
+	document.onkeydown = function (e) {
+		console.log("key down", e)
+		if (e.key === "a") {
+			setModal(true)
+		}
+	}
 	const [modal, setModal] = useState<Boolean>(false)
 	return (
 		<div className="w-full h-screen px-28 flex flex-col justify-between">
