@@ -1,11 +1,5 @@
 import { useState } from "react"
-import {
-	FaUser,
-	FaGithub,
-	FaLinkedin,
-	FaTwitter,
-	FaGoogle,
-} from "react-icons/fa"
+import { FaUser, FaGithub, FaGoogle } from "react-icons/fa"
 type ModalProps = {
 	setModal: any
 }
