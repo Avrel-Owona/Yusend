@@ -24,7 +24,7 @@ const Modal = ({ setModal }: ModalProps) => {
 				{step ? (
 					<button
 						onClick={() => setStep(false)}
-						className="absolute cursor-pointer text-gray-400 top-5 left-5  px-2 duration-200 ease-in-out"
+						className="absolute cursor-pointer text-xl text-gray-400 top-5 left-5  px-2 duration-200 ease-in-out"
 					>
 						<AiOutlineArrowLeft />
 					</button>

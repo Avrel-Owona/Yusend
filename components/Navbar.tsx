@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { AiOutlineArrowRight } from "react-icons/ai"
 type ModalProps = {
 	setModal: any
@@ -13,9 +14,11 @@ const Navbar = ({ setModal }: ModalProps) => {
 				>
 					Login <AiOutlineArrowRight className="ml-2" />
 				</button>
-				<button className="px-5 text-sm py-2 rounded-md cursor-pointer bg-white text-black">
-					Request access
-				</button>
+				<Link href={"/signin"}>
+					<button className="px-5 text-sm py-2 rounded-md cursor-pointer bg-white text-black">
+						Request access
+					</button>
+				</Link>
 			</nav>
 		</header>
 	)

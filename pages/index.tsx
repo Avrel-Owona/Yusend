@@ -4,10 +4,10 @@ import Modal from "../components/Modal"
 import { useState } from "react"
 
 export default function Home() {
-	document.onkeydown = function (e) {
-		if (e.key === "a") setModal(true)
-		else if (e.key === "Escape") setModal(false)
-	}
+	// document.onkeydown = function (e) {
+	// 	if (e.key === "a") setModal(true)
+	// 	else if (e.key === "Escape") setModal(false)
+	// }
 	const [modal, setModal] = useState<Boolean>(false)
 	return (
 		<div className="w-full h-screen px-28 flex flex-col justify-between">
