@@ -1,7 +1,16 @@
 import { FaUser } from "react-icons/fa"
+import { AiOutlineArrowLeft } from "react-icons/ai"
+import { useRouter } from "next/router"
 const Signin = () => {
+	const Router = useRouter()
 	return (
-		<div className="text-gray-200 flex items-center min-h-screen">
+		<div className="text-gray-200 relative flex items-center min-h-screen">
+			<button
+				onClick={() => Router.push("/")}
+				className="text-gray-400 absolute top-8 left-8 text-3xl"
+			>
+				<AiOutlineArrowLeft />
+			</button>
 			<div className="m-auto overflow-hidden rounded-md flex-col text-gray-400 border border-gray-200 border-opacity-20 w-96 flex items-center py-10 px-8 relative">
 				<div className="p-3 rounded-md bg-input-form">
 					<FaUser />
