@@ -2,6 +2,7 @@ import { useState } from "react"
 import { FaUser, FaGithub, FaGoogle } from "react-icons/fa"
 import { AiOutlineArrowLeft } from "react-icons/ai"
 import { RxCross1 } from "react-icons/rx"
+import { useRouter } from "next/router"
 
 type RegisterModalProps = {
 	setModal: any
@@ -10,9 +11,9 @@ type RegisterModalProps = {
 const RegisterModal = ({ setModal }: RegisterModalProps) => {
 	const [step, setStep] = useState<boolean>(false)
 	const closeModal = () => {
-		setStep(false)
 		setModal(false)
 	}
+	const Router = useRouter()
 	return (
 		<div className="h-screen w-full absolute bg-black bg-opacity-50 ease-in duration-300 top-0 right-0 flex justify-center items-center b">
 			{/* <div ></div> */}
@@ -43,7 +44,7 @@ const RegisterModal = ({ setModal }: RegisterModalProps) => {
 				</p>
 				<>
 					<button
-						onClick={() => setStep(true)}
+						onClick={() => Router.push("/signin")}
 						className="bg-gray-200 text-sm font-semibold text-black w-full mt-7 py-2 rounded-md"
 					>
 						{/* <span className="bg-gray-700 text-gray-200 p-1 text-xs rounded-full">

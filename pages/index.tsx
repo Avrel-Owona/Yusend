@@ -3,16 +3,18 @@ import Footer from "../components/Footer"
 import Modal from "../components/Modal"
 import { useEffect, useState } from "react"
 import LoginForm from "../components/LoginForm"
+import RegisterModal from "../components/RegisterModal"
 
 export default function Home() {
 	useEffect(() => {
 		document.addEventListener("keydown", detectKeyDown)
 	}, [])
 	const detectKeyDown = (e: any) => {
-		if (e.key === "a") setModal(true)
-		else if (e.key === "Escape") setModal(false)
+		if (e.key === "a") setRegisterModal(true)
+		else if (e.key === "Escape") setRegisterModal(false)
 	}
 	const [modal, setModal] = useState<Boolean>(false)
+	const [registerModal, setRegisterModal] = useState<boolean>(false)
 	return (
 		<div className="w-full h-screen px-28 flex flex-col justify-between">
 			{modal ? (
@@ -28,6 +30,7 @@ export default function Home() {
 			) : (
 				""
 			)}
+			{registerModal ? <RegisterModal setModal={setRegisterModal} /> : ""}
 			<Navbar setModal={setModal} />
 			<main className="flex">
 				<div className="text-slide-up">
@@ -50,7 +53,10 @@ export default function Home() {
 							provides the best developer experience helping you reach users
 							instead of spam folders.
 						</p>
-						<button className="text-gray-500 mt-8 text-sm cursor-pointer hover:text-gray-200 ease-out duration-300">
+						<button
+							onClick={() => setRegisterModal(true)}
+							className="text-gray-500 mt-8 text-sm cursor-pointer hover:text-gray-200 ease-out duration-300"
+						>
 							Press
 							<span className="bg-gray-400 hover:bg-gray-200 text-transparent text-black text-sm px-2 py-1 rounded-md mx-2 font-bold">
 								A
