@@ -21,16 +21,16 @@ export default function Home() {
 				<Modal
 					setModal={setModal}
 					title={"Login"}
-					description={
-						"Join our growing waitlist today and our team will reach out to you as soon as possible."
-					}
+					description={"Log in now and manage your work on your own."}
 				>
 					<LoginForm />
 				</Modal>
+			) : "" || registerModal ? (
+				<RegisterModal setModal={setRegisterModal} />
 			) : (
 				""
 			)}
-			{registerModal ? <RegisterModal setModal={setRegisterModal} /> : ""}
+
 			<Navbar setModal={setModal} />
 			<main className="flex">
 				<div className="text-slide-up">
