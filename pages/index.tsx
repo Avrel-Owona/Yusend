@@ -2,10 +2,11 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Modal from "../components/Modal"
 import { useEffect, useState } from "react"
+import LoginForm from "../components/LoginForm"
 
 export default function Home() {
 	useEffect(() => {
-		document.addEventListener("keydown", detectKeyDown, true)
+		document.addEventListener("keydown", detectKeyDown)
 	}, [])
 	const detectKeyDown = (e: any) => {
 		if (e.key === "a") setModal(true)
@@ -14,7 +15,19 @@ export default function Home() {
 	const [modal, setModal] = useState<Boolean>(false)
 	return (
 		<div className="w-full h-screen px-28 flex flex-col justify-between">
-			{modal ? <Modal setModal={setModal} /> : ""}
+			{modal ? (
+				<Modal
+					setModal={setModal}
+					title={"Login"}
+					description={
+						"Join our growing waitlist today and our team will reach out to you as soon as possible."
+					}
+				>
+					<LoginForm />
+				</Modal>
+			) : (
+				""
+			)}
 			<Navbar setModal={setModal} />
 			<main className="flex">
 				<div className="text-slide-up">
