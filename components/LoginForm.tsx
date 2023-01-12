@@ -3,6 +3,7 @@ import { LoginFormType } from "../app/types/auth.type"
 import { loginSchema } from "../app/validations/login.validation"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useState } from "react"
+import Link from "next/link"
 
 const LoginForm = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -57,8 +58,14 @@ const LoginForm = () => {
 					{errors.password?.message}
 				</small>
 			</div>
+			<Link
+				href={"#"}
+				className="text-blue-600 text-sm w-full flex justify-end mt-3 hover:underline"
+			>
+				Forgot your password ?
+			</Link>
 			<button
-				className="bg-white font-semibold text-sm text-black w-full mt-10 py-2 h-10 rounded-md"
+				className="bg-white font-semibold text-sm text-black w-full mt-7 py-2 h-10 rounded-md"
 				type="submit"
 				disabled={false}
 			>

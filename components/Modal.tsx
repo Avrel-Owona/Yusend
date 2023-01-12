@@ -1,8 +1,8 @@
-import { useRef, useState } from "react"
+import { useState } from "react"
 import { FaUser, FaGithub, FaGoogle } from "react-icons/fa"
 import { AiOutlineArrowLeft } from "react-icons/ai"
 import { RxCross1 } from "react-icons/rx"
-import LoginForm from "./LoginForm"
+import Image from "next/image"
 
 type ModalProps = {
 	setModal: any
@@ -52,11 +52,18 @@ const Modal = ({ setModal, children, title, description }: ModalProps) => {
 					<>
 						<button
 							onClick={() => setStep(true)}
-							className="bg-gray-200 text-sm font-semibold text-black w-full mt-7 py-2 rounded-md"
+							className="bg-gray-200 justify-center items-center flex text-sm font-semibold text-black w-full mt-7 py-2 rounded-md"
 						>
 							{/* <span className="bg-gray-700 text-gray-200 p-1 text-xs rounded-full">
 						Y
 					</span> */}
+							<Image
+								width={17}
+								height={17}
+								src="/favicon.ico"
+								className="rounded-md mr-1 opacity-80"
+								alt={""}
+							/>
 							Yusend
 						</button>
 						<button className="bg-gray-200 text-sm font-semibold text-black w-full flex items-center justify-center gap-x-2 mt-7 py-2 rounded-md">

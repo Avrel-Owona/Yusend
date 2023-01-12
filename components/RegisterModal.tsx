@@ -3,6 +3,8 @@ import { FaUser, FaGithub, FaGoogle } from "react-icons/fa"
 import { AiOutlineArrowLeft } from "react-icons/ai"
 import { RxCross1 } from "react-icons/rx"
 import { useRouter } from "next/router"
+import Image from "next/image"
+import { registerSchema } from "../app/validations/register.validation"
 
 type RegisterModalProps = {
 	setModal: any
@@ -37,7 +39,7 @@ const RegisterModal = ({ setModal }: RegisterModalProps) => {
 				<div className="p-3 rounded-md bg-input-form">
 					<FaUser />
 				</div>
-				<h2 className="text-gray-100 font-bold mt-5 text-xl">Signin</h2>
+				<h2 className="text-gray-100 font-bold mt-5 text-xl">Sign in</h2>
 				<p className="text-gray-400 text-center text-sm mt-3">
 					Join our growing waitlist today and our team will reach out to you as
 					soon as possible.
@@ -45,11 +47,18 @@ const RegisterModal = ({ setModal }: RegisterModalProps) => {
 				<>
 					<button
 						onClick={() => Router.push("/signin")}
-						className="bg-gray-200 text-sm font-semibold text-black w-full mt-7 py-2 rounded-md"
+						className="bg-gray-200 justify-center items-center flex text-sm font-semibold text-black w-full mt-7 py-2 rounded-md"
 					>
 						{/* <span className="bg-gray-700 text-gray-200 p-1 text-xs rounded-full">
 						Y
 					</span> */}
+						<Image
+							width={17}
+							height={17}
+							src="/favicon.ico"
+							className="rounded-md mr-1"
+							alt={""}
+						/>
 						Yusend
 					</button>
 					<button className="bg-gray-200 text-sm font-semibold text-black w-full flex items-center justify-center gap-x-2 mt-7 py-2 rounded-md">

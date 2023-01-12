@@ -8,5 +8,8 @@ const schema = {
 			/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/,
 			"Should have at least 8 characters, with one capital letter and one number."
 		),
+	confirm_password: yup
+		.string()
+		.oneOf([yup.ref("password"), null], "Passwords must match"),
 }
 export default schema
