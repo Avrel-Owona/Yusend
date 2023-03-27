@@ -25,9 +25,9 @@ const Footer = () => {
 						</a>
 					</div>
 					<span className="text-end sm:text-start">
-						Yaoundé, Cameroon #237 <br />
+						Yaounde, Cameroon #237 <br />
 						{/* © {new Date().getFullYear()} */}
-						Coding by{" "}
+						Code by{" "}
 						<a
 							href="#"
 							className="hover:text-gray-200 duration-100 ease-out cursor-pointer"
