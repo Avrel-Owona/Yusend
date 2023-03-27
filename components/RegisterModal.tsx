@@ -1,17 +1,13 @@
-import { useState } from "react"
 import { FaUser, FaGithub, FaGoogle } from "react-icons/fa"
-import { AiOutlineArrowLeft } from "react-icons/ai"
 import { RxCross1 } from "react-icons/rx"
 import { useRouter } from "next/router"
 import Image from "next/image"
-import { registerSchema } from "../app/validations/register.validation"
 
 type RegisterModalProps = {
 	setModal: any
 }
 
 const RegisterModal = ({ setModal }: RegisterModalProps) => {
-	const [step, setStep] = useState<boolean>(false)
 	const closeModal = () => {
 		setModal(false)
 	}
@@ -26,16 +22,7 @@ const RegisterModal = ({ setModal }: RegisterModalProps) => {
 				>
 					<RxCross1 />
 				</button>
-				{step ? (
-					<button
-						onClick={() => setStep(false)}
-						className="absolute cursor-pointer text-xl text-gray-400 top-5 left-5  px-2 duration-200 ease-in-out"
-					>
-						<AiOutlineArrowLeft />
-					</button>
-				) : (
-					""
-				)}
+
 				<div className="p-3 rounded-md bg-input-form">
 					<FaUser />
 				</div>

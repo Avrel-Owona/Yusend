@@ -5,6 +5,8 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { registerSchema } from "../app/validations/register.validation"
+import Link from "next/link"
+import { FaUser } from "react-icons/fa"
 
 const Signin = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -36,18 +38,23 @@ const Signin = () => {
 		<div className="text-gray-200 flex-col justify-center relative flex items-center min-h-screen">
 			<button
 				onClick={() => Router.push("/")}
-				className="text-gray-400 absolute top-8 left-8 text-3xl"
+				className="text-gray-400 absolute top-8 left-8 text-2xl sm:text-3xl"
 			>
 				<AiOutlineArrowLeft />
 			</button>
-			<span className="text-gray-50 font-medium text-xl">Yusend</span>
+			<Link href={"/"} className="text-gray-50 font-medium text-2xl sm:text-xl">
+				Yusend
+			</Link>
 
-			<div className="mx-auto mt-10 overflow-hidden rounded-md flex-col text-gray-400 border border-gray-200 border-opacity-20 w-96 flex items-center pb-10 px-8 relative">
+			<div className="mx-auto mt-10 overflow-hidden rounded-md flex-col text-gray-400 sm:border sm:border-gray-200 sm:border-opacity-20 w-full sm:w-96 flex items-center py-10 px-8 relative">
+				<div className="p-3 rounded-md bg-input-form">
+					<FaUser />
+				</div>
 				<form
 					onSubmit={handleSubmit(onRegister)}
 					className={"w-full pt-8 duration-300 ease-in-out"}
 				>
-					<h3 className="text-gray-100 text-xl font-medium text-center">
+					<h3 className="text-gray-100 text-base sm:text-xl font-medium text-center">
 						Sign in to your acccount
 					</h3>
 

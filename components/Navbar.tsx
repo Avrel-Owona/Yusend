@@ -6,17 +6,19 @@ type ModalProps = {
 const Navbar = ({ setModal }: ModalProps) => {
 	return (
 		<header className="flex justify-between py-5 items-center header-slide-down">
-			<span className="text-gray-50 font-medium text-xl">Yusend</span>
+			<Link href={"/"} className="text-gray-50 font-medium text-xl">
+				Yusend
+			</Link>
 			<nav className="flex">
 				<button
 					onClick={() => setModal(true)}
-					className="px-5 flex items-center mr-4 text-sm py-2 rounded-md cursor-pointer text-gray-400 border-gray-400 bg-slate border"
+					className="px-5 flex items-center xl:mr-4 text-sm sm:text-base xl:text-sm py-2 rounded-md cursor-pointer text-gray-400 border-gray-400 bg-slate border"
 				>
 					Login <AiOutlineArrowRight className="ml-2" />
 				</button>
 				<Link href={"/signin"}>
-					<button className="px-5 text-sm py-2 rounded-md cursor-pointer bg-white text-black">
-						Request access
+					<button className="px-5 hidden xl:flex text-sm py-2 rounded-md cursor-pointer bg-white text-black">
+						Get started
 					</button>
 				</Link>
 			</nav>

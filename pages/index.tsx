@@ -4,6 +4,8 @@ import Modal from "../components/Modal"
 import { useEffect, useState } from "react"
 import LoginForm from "../components/LoginForm"
 import RegisterModal from "../components/RegisterModal"
+import { AiOutlineArrowRight } from "react-icons/ai"
+import Link from "next/link"
 
 export default function Home() {
 	useEffect(() => {
@@ -16,7 +18,7 @@ export default function Home() {
 	const [modal, setModal] = useState<Boolean>(false)
 	const [registerModal, setRegisterModal] = useState<boolean>(false)
 	return (
-		<div className="w-full h-screen px-28 flex flex-col justify-between">
+		<div className="w-full h-screen px-7 sm:px-20 xl:px-28 flex flex-col justify-between">
 			{modal ? (
 				<Modal
 					setModal={setModal}
@@ -37,7 +39,7 @@ export default function Home() {
 					<span className="text-xs bg-orange text-orange-400 py-1 px-2 rounded-full">
 						Currently in private beta
 					</span>
-					<h3 className="bg-gradient bg-clip-text text-transparent text-6xl font-bold mt-3">
+					<h3 className="bg-gradient bg-clip-text text-transparent text-4xl sm:text-7xl xl:text-6xl font-bold mt-3">
 						Send <br /> Receive <br /> Developers
 						{/* API for developers */}
 						{/* <span className="bg-dev text-emerald-300">developers</span> */}
@@ -48,21 +50,26 @@ export default function Home() {
 						<span className="bg-dev text-emerald-300">developers</span>
 					</h3> */}
 					<div>
-						<p className="w-3/6 mt-5 text-gray-500">
+						<p className="w-5/6 sm:w-4/6 xl:w-3/6 mt-5 text-gray-500 text-sm sm:text-base">
 							Build, test, and send transactional emails at scale. Resend
 							provides the best developer experience helping you reach users
 							instead of spam folders.
 						</p>
 						<button
 							onClick={() => setRegisterModal(true)}
-							className="text-gray-500 mt-8 text-sm cursor-pointer hover:text-gray-200 ease-out duration-300"
+							className="text-gray-500 items-center hidden xl:flex mt-8 text-sm cursor-pointer hover:text-gray-200 ease-out duration-300"
 						>
 							Press
 							<span className="bg-gray-400 hover:bg-gray-200 text-transparent text-black text-sm px-2 py-1 rounded-md mx-2 font-bold">
 								A
 							</span>
-							to sign in
+							to sign up
 						</button>
+						<Link href={"/signin"}>
+							<button className="px-5 mt-8 xl:hidden text-xs sm:text-base py-2 rounded-md cursor-pointer bg-white text-black">
+								Get started
+							</button>
+						</Link>
 					</div>
 				</div>
 				{/* <div>dsfsdfsdfs</div> */}

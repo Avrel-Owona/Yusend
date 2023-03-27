@@ -58,12 +58,14 @@ const LoginForm = () => {
 					{errors.password?.message}
 				</small>
 			</div>
-			<Link
-				href={"#"}
-				className="text-blue-600 text-sm w-full flex justify-end mt-3 hover:underline"
-			>
-				Forgot your password ?
-			</Link>
+			<span className="flex w-full justify-end">
+				<Link
+					href={"#"}
+					className="text-blue-600 text-sm w-max flex justify-end mt-3 hover:underline"
+				>
+					Forgot your password ?
+				</Link>
+			</span>
 			<button
 				className="bg-white font-semibold text-sm text-black w-full mt-7 py-2 h-10 rounded-md"
 				type="submit"
