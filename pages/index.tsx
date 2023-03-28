@@ -69,7 +69,7 @@ export default function Home() {
 							to sign up
 						</button>
 						<Link href={"/signin"}>
-							<button className="px-5 box-shadow-get mt-8 xl:hidden text-xs sm:text-base py-2 rounded-md cursor-pointer bg-white text-black">
+							<button className="px-5 box-shadow-get mt-8 xl:hidden text-base py-2 rounded-md cursor-pointer bg-white text-black">
 								Get started
 							</button>
 						</Link>
