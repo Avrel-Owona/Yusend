@@ -1,7 +1,10 @@
-const Overlay = ({ position }) => {
+type position = {
+	position: any
+}
+const Overlay = ({ position }: position) => {
 	return (
 		<svg
-			className={`absolute left-0 right-0 z-0 mx-auto hidden select-none md:block + ${position}`}
+			className={`absolute -left-80 sm:-left-40 lg:left-0 lg:right-0 z-0 mx-auto  select-none md:block + ${position}`}
 			width="1227"
 			height="357"
 			viewBox="0 0 1227 357"
