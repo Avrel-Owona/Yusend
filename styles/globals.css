@@ -8,6 +8,9 @@ body{
 .text-color-home-p {
   color: rgba(239,247,255,.615);
 }
+.box-shadow-get {
+  box-shadow: rgb(5 162 194 / 30%) -8px 0px 20px, rgb(112 225 200 / 30%) 0px 0px 20px, rgb(255 178 36 / 30%) 8px 0px 20px;
+}
 /* ======== Modal animation =========*/
 .modal{
   animation: open-scale-in-fade .2s ease-in-out;

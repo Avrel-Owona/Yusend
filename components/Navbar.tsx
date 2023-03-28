@@ -17,7 +17,7 @@ const Navbar = ({ setModal }: ModalProps) => {
 					Login <AiOutlineArrowRight className="ml-2" />
 				</button>
 				<Link href={"/signin"}>
-					<button className="px-5 hidden xl:flex text-sm py-2 rounded-md cursor-pointer bg-white text-black">
+					<button className="px-5 box-shadow-get hidden xl:flex text-sm py-2 rounded-md cursor-pointer bg-white text-black">
 						Get started
 					</button>
 				</Link>
