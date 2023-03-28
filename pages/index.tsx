@@ -37,7 +37,7 @@ export default function Home() {
 			<Navbar setModal={setModal} />
 			<main className="flex">
 				<Overlay position={"top-0"} />
-				<Overlay position={"bottom-0"} />
+				<Overlay position={"-bottom-32"} />
 				<div className="text-slide-up">
 					<span className="text-xs bg-orange text-orange-500 font-medium py-1 px-2 rounded-md">
 						Currently in private beta
