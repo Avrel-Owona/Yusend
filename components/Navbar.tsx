@@ -12,7 +12,7 @@ const Navbar = ({ setModal }: ModalProps) => {
 			<nav className="flex">
 				<button
 					onClick={() => setModal(true)}
-					className="px-5 flex items-center xl:mr-4 text-sm sm:text-base xl:text-sm py-2 rounded-md cursor-pointer text-gray-400 border-gray-400 bg-slate border"
+					className="px-5 flex items-center xl:mr-4 text-sm sm:text-base xl:text-sm py-2 rounded-md cursor-pointer text-gray-400 border-gray-600 bg-slate border"
 				>
 					Login <AiOutlineArrowRight className="ml-2" />
 				</button>

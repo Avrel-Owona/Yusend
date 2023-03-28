@@ -5,7 +5,9 @@
 body{
   background: #05050B;
 }
-
+.text-color-home-p {
+  color: rgba(239,247,255,.615);
+}
 /* ======== Modal animation =========*/
 .modal{
   animation: open-scale-in-fade .2s ease-in-out;
