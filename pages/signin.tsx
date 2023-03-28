@@ -46,7 +46,7 @@ const Signin = () => {
 				Yusend
 			</Link>
 
-			<div className="mx-auto mt-10 overflow-hidden rounded-md flex-col text-gray-400 sm:border sm:border-gray-200 sm:border-opacity-20 w-full sm:w-96 flex items-center py-10 px-8 relative">
+			<div className="mx-auto sm:mt-10 overflow-hidden rounded-md flex-col text-gray-400 sm:border sm:border-gray-200 sm:border-opacity-20 w-full sm:w-96 flex items-center py-10 px-8 relative">
 				<div className="p-3 rounded-md bg-input-form">
 					<FaUser />
 				</div>
