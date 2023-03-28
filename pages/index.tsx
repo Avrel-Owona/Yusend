@@ -42,7 +42,7 @@ export default function Home() {
 					<span className="text-xs bg-orange text-orange-500 font-medium py-1 px-2 rounded-md">
 						Currently in private beta
 					</span>
-					<h3 className="bg-gradient bg-clip-text text-transparent text-4xl sm:text-7xl xl:text-6xl font-bold mt-3">
+					<h3 className="bg-gradient bg-clip-text text-transparent text-5xl sm:text-7xl xl:text-6xl font-bold mt-3">
 						Send <br /> Receive <br /> Developers
 						{/* API for developers */}
 						{/* <span className="bg-dev text-emerald-300">developers</span> */}
@@ -53,7 +53,7 @@ export default function Home() {
 						<span className="bg-dev text-emerald-300">developers</span>
 					</h3> */}
 					<div>
-						<p className="w-5/6 sm:w-4/6 xl:w-3/6 mt-5 text-color-home-p text-sm sm:text-base">
+						<p className="w-5/6 sm:w-4/6 xl:w-3/6 mt-5 text-color-home-p text-base">
 							Build, test, and send transactional emails at scale. Resend
 							provides the best developer experience helping you reach users
 							instead of spam folders.
