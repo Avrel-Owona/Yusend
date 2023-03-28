@@ -53,7 +53,7 @@ export default function Home() {
 						<span className="bg-dev text-emerald-300">developers</span>
 					</h3> */}
 					<div>
-						<p className="w-5/6 sm:w-4/6 xl:w-3/6 mt-5 text-color-home-p text-base">
+						<p className="w-full sm:w-4/6 xl:w-3/6 mt-5 text-color-home-p text-base">
 							Build, test, and send transactional emails at scale. Resend
 							provides the best developer experience helping you reach users
 							instead of spam folders.
