@@ -4,7 +4,7 @@ type position = {
 const Overlay = ({ position }: position) => {
 	return (
 		<svg
-			className={`absolute -left-80 sm:-left-40 lg:left-0 lg:right-0 z-0 mx-auto  select-none md:block + ${position}`}
+			className={`absolute -z-10 -left-80 sm:-left-40 lg:left-0 lg:right-0 mx-auto  select-none md:block + ${position}`}
 			width="1227"
 			height="357"
 			viewBox="0 0 1227 357"

@@ -38,11 +38,20 @@ const Signin = () => {
 		<div className="text-gray-200 flex-col justify-center relative flex items-center min-h-screen">
 			<button
 				onClick={() => Router.push("/")}
-				className="text-gray-400 absolute flex top-8 left-8 text-sm items-center gap-x-2 rounded-md cursor-pointer border-gray-600 py-1.5 bg-slate border px-5"
+				className="text-gray-400 absolute hidden sm:flex top-8 left-8 text-sm items-center gap-x-2 rounded-md cursor-pointer border-gray-600 py-1.5 bg-slate border px-5"
 			>
 				<AiOutlineArrowLeft /> Home
 			</button>
-			<Link href={"/"} className="text-gray-50 font-medium text-2xl sm:text-xl">
+			<button
+				onClick={() => Router.push("/")}
+				className="text-gray-400 sm:hidden absolute flex top-8 left-8 text-sm items-center gap-x-2 rounded-md cursor-pointer border-gray-600 py-1.5 bg-slate border px-5"
+			>
+				<AiOutlineArrowLeft /> Yusend Home
+			</button>
+			<Link
+				href={"/"}
+				className="text-gray-50 hidden sm:block font-medium text-2xl sm:text-xl"
+			>
 				Yusend
 			</Link>
 
