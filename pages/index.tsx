@@ -19,7 +19,7 @@ export default function Home() {
 	const [modal, setModal] = useState<Boolean>(false)
 	const [registerModal, setRegisterModal] = useState<boolean>(false)
 	return (
-		<div className="w-full overflow-hidden relative h-screen px-7 sm:px-20 xl:px-28 flex flex-col justify-between">
+		<div className="w-full overflow-hidden 2xl:max-w-7xl mx-auto relative h-screen px-7 sm:px-20 xl:px-28 flex flex-col justify-between">
 			{modal ? (
 				<Modal
 					setModal={setModal}
