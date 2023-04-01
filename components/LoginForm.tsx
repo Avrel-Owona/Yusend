@@ -7,6 +7,22 @@ import Link from "next/link"
 
 const LoginForm = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(false)
+	const [data, setData] = useState<any>({
+		email: "",
+		password: "",
+	})
+	const onLogin = ({ email, password }: OnLoginProps) => {
+		setData({
+			email: email,
+			password: password,
+		})
+		console.log("data", data)
+		// console.log({
+		// 	email: email,
+		// 	pasword: password,
+		// })
+	}
+
 	const {
 		register,
 		handleSubmit,
@@ -18,12 +34,7 @@ const LoginForm = () => {
 		email: string
 		password: string
 	}
-	const onLogin = ({ email, password }: OnLoginProps) => {
-		console.log({
-			email: email,
-			pasword: password,
-		})
-	}
+
 	return (
 		<form
 			onSubmit={handleSubmit(onLogin)}
